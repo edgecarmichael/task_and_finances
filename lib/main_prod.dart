@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'app.dart';
-import 'flavors.dart';
+import 'package:task_and_finances/main_app.dart';
+import 'app/core/flavors/flavors.dart';
 
-void main() {
-  F.appFlavor = Flavor.prod;
-  runApp(App());
+Future<void> main() async {
+  mainApp(Flavor.prod);
 }
