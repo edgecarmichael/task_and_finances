@@ -1,5 +1,5 @@
-import 'package:task_and_finances/core/theme/app_colors.dart';
-import 'package:task_and_finances/core/theme/app_text_styles.dart';
+import 'app_colors.dart';
+import 'app_text_styles.dart';
 
 class AppTheme {
   static final AppTheme _instance = AppTheme();
