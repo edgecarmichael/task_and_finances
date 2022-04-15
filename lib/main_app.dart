@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:task_and_finances/app_widget.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:task_and_finances/app/app_module.dart';
 
-import 'core/flavors/flavors.dart';
+import 'app/core/flavors/flavors.dart';
 
-mainApp(Flavor flavor) {
-  // Flavor appFlavor = flavor;
+Future<void> mainApp(Flavor flavor) async {
+  appFlavor = flavor;
 
   runApp(
-    const AppWidget(),
+    const AppModule(),
   );
 }

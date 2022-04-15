@@ -1,6 +1,6 @@
+import 'package:task_and_finances/app/core/flavors/flavors.dart';
 import 'package:task_and_finances/main_app.dart';
-import 'core/flavors/flavors.dart';
 
-void main() {
+Future<void> main() async {
   mainApp(Flavor.qa);
 }
