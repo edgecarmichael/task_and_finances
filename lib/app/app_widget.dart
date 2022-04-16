@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_i18n/flutter_i18n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:task_and_finances/app/core/database/sqlite_adm_connection.dart';
 import 'package:task_and_finances/app/core/flavors/flavors.dart';
 import 'package:task_and_finances/app/modules/auth/auth_module.dart';
@@ -28,11 +30,22 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: FlavorExt.title,
-      initialRoute: '/login',
-      routes: {
-        ...AuthModule().routers,
-      },
-    );
+        title: FlavorExt.title,
+        initialRoute: '/login',
+        routes: {
+          ...AuthModule().routers,
+        },
+        localizationsDelegates: [
+          FlutterI18nDelegate(
+            translationLoader: FileTranslationLoader(
+              useCountryCode: false,
+              fallbackFile: "pt-br",
+              basePath: "assets/i18n",
+            ),
+          ),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        builder: FlutterI18n.rootAppBuilder());
   }
 }
