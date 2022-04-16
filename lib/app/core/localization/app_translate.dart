@@ -13,7 +13,7 @@ extension TranslateBuildContext on BuildContext {
 }
 
 extension TranslateString on String {
-  String tr(BuildContext context, String key, {Map<String, String>? params}) {
+  String tr(BuildContext context, {Map<String, String>? params}) {
     return translate(context, this, params: params);
   }
 }
