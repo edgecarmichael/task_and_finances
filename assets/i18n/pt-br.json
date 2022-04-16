@@ -1,5 +1,9 @@
 {
     "common":{
         "teste": "testando"
+    },
+    "login":{
+        "title": "Seja bem vindo!",
+        "subtitle": "É um prazer tê-lo aqui."
     }
 }
