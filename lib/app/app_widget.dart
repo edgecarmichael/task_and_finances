@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_and_finances/app/core/database/sqlite_adm_connection.dart';
 import 'package:task_and_finances/app/core/flavors/flavors.dart';
+import 'package:task_and_finances/app/modules/auth/auth_module.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -28,6 +29,10 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: FlavorExt.title,
+      initialRoute: '/login',
+      routes: {
+        ...AuthModule().routers,
+      },
     );
   }
 }
